@@ -1,0 +1,33 @@
+<nav>
+  <div class="nav-left">
+    <a href="/" class="nav-logo-wrap">
+      <svg class="nav-logo-svg" viewBox="0 0 60 44" fill="none" xmlns="http://www.w3.org/2000/svg" height="44">
+        <text x="0" y="34" font-family="Cormorant Garamond, serif" font-size="36" font-weight="600" fill="#C4922A">OA</text>
+      </svg>
+      <div class="nav-divider"></div>
+      <div class="nav-identity">
+        <div class="nav-name-en">OA GROUP</div>
+        <div class="nav-name-ar">مجموعة OA</div>
+      </div>
+    </a>
+  </div>
+  <div class="nav-links">
+    <a class="nav-link {% if request.resolver_match.url_name == 'home' %}nav-active{% endif %}" href="{% url 'home' %}">
+      <span class="en">Home</span><span class="ar">الرئيسية</span>
+    </a>
+    <a class="nav-link {% if request.resolver_match.url_name == 'about' %}nav-active{% endif %}" href="{% url 'about' %}">
+      <span class="en">About</span><span class="ar">عن المجموعة</span>
+    </a>
+    <a class="nav-link {% if request.resolver_match.url_name == 'services' %}nav-active{% endif %}" href="{% url 'services' %}">
+      <span class="en">Services</span><span class="ar">الخدمات</span>
+    </a>
+    <a class="nav-link {% if request.resolver_match.url_name == 'contact' %}nav-active{% endif %}" href="{% url 'contact' %}">
+      <span class="en">Contact</span><span class="ar">تواصل</span>
+    </a>
+  </div>
+  <div class="nav-right">
+    <button class="lang-btn active" id="btn-en" onclick="setLang('ltr')">EN</button>
+    <span class="lang-sep">|</span>
+    <button class="lang-btn" id="btn-ar" onclick="setLang('rtl')">AR</button>
+  </div>
+</nav>

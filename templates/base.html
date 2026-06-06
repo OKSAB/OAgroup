@@ -1,0 +1,30 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>{% block title %}OA Group{% endblock %}</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&family=Montserrat:wght@300;400;500;600&family=Noto+Serif+Arabic:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{% static 'css/main.css' %}">
+</head>
+<body>
+  {% include 'partials/nav.html' %}
+
+  {% block content %}{% endblock %}
+
+  <script>
+    function setLang(dir) {
+      document.documentElement.setAttribute('dir', dir);
+      document.getElementById('btn-en').classList.toggle('active', dir === 'ltr');
+      document.getElementById('btn-ar').classList.toggle('active', dir === 'rtl');
+      localStorage.setItem('oagroup_lang', dir);
+    }
+    (function(){
+      var saved = localStorage.getItem('oagroup_lang');
+      if (saved) setLang(saved);
+    })();
+  </script>
+</body>
+</html>

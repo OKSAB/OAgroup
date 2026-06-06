@@ -1,0 +1,88 @@
+{% extends 'base.html' %}
+{% block title %}Contact — OA Group{% endblock %}
+
+{% block content %}
+
+<!-- HERO -->
+<section class="hero" style="min-height:45vh;">
+  <div class="hero-left" style="padding-top:120px;padding-bottom:80px;">
+    <div class="hero-tag"><span class="en">Get in Touch</span><span class="ar" style="display:none;">تواصل معنا</span></div>
+    <h1 class="hero-h1 en">Let's<br><em>Connect.</em></h1>
+    <h1 class="hero-h1 ar" style="display:none;">دعنا<br><em>نتواصل.</em></h1>
+    <div class="hero-rule"></div>
+    <p class="hero-body en">Whether you have a legal question, a business enquiry, or simply want to introduce yourself — we'd love to hear from you.</p>
+    <p class="hero-body ar" style="display:none;">سواء كان لديك سؤال قانوني أو استفسار تجاري أو مجرد رغبة في التعريف بنفسك — يسعدنا الاستماع إليك.</p>
+  </div>
+  <div class="hero-right">
+    <div style="width:100%;min-height:45vh;background:linear-gradient(160deg,#1c1409 0%,#0f0f0f 50%,#080808 100%);position:relative;">
+      <div style="position:absolute;inset:0;background:radial-gradient(ellipse at 60% 50%,rgba(196,146,42,0.07) 0%,transparent 60%);"></div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT FORM -->
+<section class="sec sec-dark">
+  <div class="contact-form-wrap">
+
+    {% if messages %}
+      {% for message in messages %}
+        <div class="alert {% if message.tags == 'success' %}alert-success{% else %}alert-error{% endif %}">
+          {{ message }}
+        </div>
+      {% endfor %}
+    {% endif %}
+
+    <div class="eyebrow en">Send a Message</div>
+    <div class="eyebrow ar" style="display:none;">أرسل رسالة</div>
+    <h2 class="sec-title en">We'd love to <em>hear from you.</em></h2>
+    <h2 class="sec-title ar" style="display:none;">يسعدنا <em>التواصل معك.</em></h2>
+    <div class="rule"></div>
+
+    <form method="post" action="{% url 'contact' %}" style="margin-top:40px;">
+      {% csrf_token %}
+      <div class="f-row">
+        <input class="f-input" type="text" name="name" placeholder="Full Name / الاسم الكامل" required value="{{ form_data.name|default:'' }}"/>
+        <input class="f-input" type="email" name="email" placeholder="Email / البريد الإلكتروني" required value="{{ form_data.email|default:'' }}"/>
+      </div>
+      <div class="f-full">
+        <input class="f-input" type="text" name="subject" placeholder="Subject / الموضوع" required value="{{ form_data.subject|default:'' }}"/>
+      </div>
+      <div class="f-full">
+        <textarea class="f-input" name="message" placeholder="Message / الرسالة" required>{{ form_data.message|default:'' }}</textarea>
+      </div>
+      <div style="margin-top:8px;">
+        <button type="submit" class="btn-gold">
+          <span class="en">Send Message →</span>
+          <span class="ar" style="display:none;">← إرسال الرسالة</span>
+        </button>
+      </div>
+    </form>
+  </div>
+</section>
+
+<!-- CONTACT INFO BAND -->
+<section class="sec" style="background:var(--bg);">
+  <div style="max-width:680px;margin:0 auto;">
+    <div class="eyebrow en">Direct Contact</div>
+    <div class="eyebrow ar" style="display:none;">تواصل مباشر</div>
+    <h2 class="sec-title en">Other Ways to <em>Reach Us</em></h2>
+    <h2 class="sec-title ar" style="display:none;">طرق أخرى <em>للتواصل</em></h2>
+    <div class="rule"></div>
+    <div style="display:flex;flex-direction:column;gap:24px;margin-top:8px;">
+      <div class="cta-contact-row">
+        <div class="cta-c-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+        </div>
+        <div>
+          <div class="cta-c-label en">Email</div>
+          <div class="cta-c-label ar" style="display:none;">البريد الإلكتروني</div>
+          <a href="mailto:info@oagroup.com" class="cta-c-val ltr-inline">info@oagroup.com</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% include 'partials/footer.html' %}
+
+{% endblock %}
