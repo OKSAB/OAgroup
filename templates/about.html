@@ -1,4 +1,5 @@
 {% extends 'base.html' %}
+{% load static %}
 {% block title %}About — OA Group{% endblock %}
 
 {% block content %}
@@ -14,9 +15,7 @@
     <p class="hero-body ar" style="display:none;">مجموعة OA هي المنصة المهنية الشخصية لعمر العامودي — تجمع الخبرة القانونية والخدمات التجارية والمشاريع المستقبلية تحت هوية واحدة موثوقة مبنية على الجودة والعلاقات طويلة الأمد.</p>
   </div>
   <div class="hero-right">
-    <div style="width:100%;min-height:60vh;background:linear-gradient(160deg,#1c1409 0%,#0f0f0f 50%,#080808 100%);position:relative;">
-      <div style="position:absolute;inset:0;background:radial-gradient(ellipse at 60% 50%,rgba(196,146,42,0.07) 0%,transparent 60%);"></div>
-    </div>
+    <img src="{% static 'images/corporate-meeting.jpg' %}" alt="OA Group — Corporate Services">
   </div>
 </section>
 
@@ -89,9 +88,7 @@
       </div>
     </div>
     <div class="ahead-img">
-      <div style="width:100%;min-height:360px;background:linear-gradient(135deg,#141414 0%,#1a1a1a 50%,#0f0f0f 100%);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;">
-        <div style="font-family:'Cormorant Garamond',serif;font-size:96px;font-weight:300;color:rgba(196,146,42,0.1);line-height:1;text-align:center;">OA</div>
-      </div>
+      <img src="{% static 'images/team-discussion.jpg' %}" alt="OA Group — Future Ventures">
     </div>
   </div>
 </section>

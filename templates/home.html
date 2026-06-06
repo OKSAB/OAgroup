@@ -1,4 +1,5 @@
 {% extends 'base.html' %}
+{% load static %}
 {% block title %}OA Group — Professional Excellence{% endblock %}
 
 {% block content %}
@@ -18,9 +19,7 @@
     </div>
   </div>
   <div class="hero-right">
-    <div class="hero-placeholder" style="min-height:100vh;background:linear-gradient(160deg,#1c1409 0%,#0f0f0f 40%,#080808 100%);">
-      <div style="position:absolute;inset:0;background:radial-gradient(ellipse at 70% 40%,rgba(196,146,42,0.08) 0%,transparent 65%);"></div>
-    </div>
+    <img src="{% static 'images/city-skyline.png' %}" alt="OA Group — Professional Excellence">
   </div>
 </section>
 
@@ -70,12 +69,8 @@
 <!-- OMAR ALAMOUDI PROFILE -->
 <section style="background:var(--bg);">
   <div class="bio-band">
-    <div class="bio-img" style="background:linear-gradient(135deg,#1a1a1a 0%,#0f0f0f 100%);min-height:400px;position:relative;">
-      <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;">
-        <div style="text-align:center;">
-          <div style="font-family:'Cormorant Garamond',serif;font-size:72px;font-weight:300;color:rgba(196,146,42,0.2);line-height:1;">OA</div>
-        </div>
-      </div>
+    <div class="bio-img">
+      <img src="{% static 'images/ksa-professional.jpg' %}" alt="Omar AlAmoudi — OA Group">
     </div>
     <div class="bio-content">
       <div class="eyebrow en">Omar AlAmoudi</div>

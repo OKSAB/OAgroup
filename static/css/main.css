@@ -136,7 +136,7 @@ nav{
 .svc-hub-sub{font-size:11.5px;font-weight:600;letter-spacing:3px;text-transform:uppercase;color:var(--gold);margin-bottom:18px;}
 .svc-hub-rule{width:32px;height:1px;background:var(--gold-dim);margin-bottom:18px;}
 .svc-hub-desc{font-size:14.5px;line-height:2;color:var(--dim);margin-bottom:36px;}
-.svc-hub-arrow{font-size:11px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--gold);display:flex;align-items:center;gap:8px;}
+.svc-hub-arrow{font-size:11px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--gold);display:flex;align-items:center;gap:8px;text-decoration:none;}
 .svc-hub-coming{display:inline-flex;align-items:center;gap:8px;font-size:10px;font-weight:600;letter-spacing:4px;text-transform:uppercase;color:var(--dim);border:1px solid rgba(255,255,255,0.1);padding:8px 16px;margin-top:8px;}
 .pulse-dot{width:6px;height:6px;border-radius:50%;background:var(--gold);animation:pulse 2s infinite;flex-shrink:0;}
 @keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.3;transform:scale(1.5)}}

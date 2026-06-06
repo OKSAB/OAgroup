@@ -1,4 +1,5 @@
 {% extends 'base.html' %}
+{% load static %}
 {% block title %}Contact — OA Group{% endblock %}
 
 {% block content %}
@@ -14,9 +15,7 @@
     <p class="hero-body ar" style="display:none;">سواء كان لديك سؤال قانوني أو استفسار تجاري أو مجرد رغبة في التعريف بنفسك — يسعدنا الاستماع إليك.</p>
   </div>
   <div class="hero-right">
-    <div style="width:100%;min-height:45vh;background:linear-gradient(160deg,#1c1409 0%,#0f0f0f 50%,#080808 100%);position:relative;">
-      <div style="position:absolute;inset:0;background:radial-gradient(ellipse at 60% 50%,rgba(196,146,42,0.07) 0%,transparent 60%);"></div>
-    </div>
+    <img src="{% static 'images/ksa-professional.jpg' %}" alt="OA Group — Contact Us">
   </div>
 </section>
 
@@ -76,7 +75,17 @@
         <div>
           <div class="cta-c-label en">Email</div>
           <div class="cta-c-label ar" style="display:none;">البريد الإلكتروني</div>
-          <a href="mailto:info@oagroup.com" class="cta-c-val ltr-inline">info@oagroup.com</a>
+          <a href="mailto:abulksm911@gmail.com" class="cta-c-val ltr-inline">abulksm911@gmail.com</a>
+        </div>
+      </div>
+      <div class="cta-contact-row">
+        <div class="cta-c-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.63A2 2 0 012 .18h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+        </div>
+        <div>
+          <div class="cta-c-label en">Phone</div>
+          <div class="cta-c-label ar" style="display:none;">الهاتف</div>
+          <a href="tel:+966570000069" class="cta-c-val ltr-inline">+966 57 000 0069</a>
         </div>
       </div>
     </div>

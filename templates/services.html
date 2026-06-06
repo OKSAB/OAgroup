@@ -1,4 +1,5 @@
 {% extends 'base.html' %}
+{% load static %}
 {% block title %}Services — OA Group{% endblock %}
 
 {% block content %}
@@ -14,9 +15,7 @@
     <p class="hero-body ar" style="display:none;">من الاستشارات القانونية المتخصصة إلى الخدمات المؤسسية الشاملة والمشاريع المستقبلية — تقدم مجموعة OA خدماتها عبر ثلاثة محاور أساسية.</p>
   </div>
   <div class="hero-right">
-    <div style="width:100%;min-height:55vh;background:linear-gradient(160deg,#1c1409 0%,#0f0f0f 50%,#080808 100%);position:relative;">
-      <div style="position:absolute;inset:0;background:radial-gradient(ellipse at 60% 50%,rgba(196,146,42,0.07) 0%,transparent 60%);"></div>
-    </div>
+    <img src="{% static 'images/corporate-meeting.jpg' %}" alt="OA Group — Services">
   </div>
 </section>
 
@@ -42,8 +41,8 @@
       <div class="svc-hub-rule"></div>
       <p class="svc-hub-desc en">Comprehensive legal advisory spanning commercial contracts, corporate law, dispute resolution, and regulatory compliance. Every matter handled with the rigour and discretion it deserves.</p>
       <p class="svc-hub-desc ar" style="display:none;">استشارات قانونية شاملة تمتد عبر العقود التجارية وقانون الشركات وتسوية النزاعات والامتثال التنظيمي. كل أمر يُعالج بالدقة والسرية التي يستحقها.</p>
-      <div class="svc-hub-arrow en">Enquire →</div>
-      <div class="svc-hub-arrow ar" style="display:none;">← استفسر الآن</div>
+      <a href="{% url 'contact' %}" class="svc-hub-arrow en">Enquire →</a>
+      <a href="{% url 'contact' %}" class="svc-hub-arrow ar" style="display:none;">← استفسر الآن</a>
     </div>
 
     <!-- Corporate Services -->
@@ -59,8 +58,8 @@
       <div class="svc-hub-rule"></div>
       <p class="svc-hub-desc en">End-to-end support for business formation, corporate structuring, governance, and ongoing operational advisory. Built for founders, investors, and established enterprises alike.</p>
       <p class="svc-hub-desc ar" style="display:none;">دعم شامل من البداية إلى النهاية لتأسيس الأعمال والهيكلة المؤسسية والحوكمة والاستشارات التشغيلية المستمرة. مصمم للمؤسسين والمستثمرين والشركات الراسخة على حد سواء.</p>
-      <div class="svc-hub-arrow en">Enquire →</div>
-      <div class="svc-hub-arrow ar" style="display:none;">← استفسر الآن</div>
+      <a href="{% url 'contact' %}" class="svc-hub-arrow en">Enquire →</a>
+      <a href="{% url 'contact' %}" class="svc-hub-arrow ar" style="display:none;">← استفسر الآن</a>
     </div>
 
     <!-- Future Ventures -->
