@@ -1,18 +1,24 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block title %}Services — OA Group{% endblock %}
+{% block meta_desc %}OA Group offers expert legal counsel, end-to-end corporate business services, and strategic future ventures including real estate and investment in Saudi Arabia.{% endblock %}
+{% block meta_kw %}legal services Saudi Arabia, corporate setup KSA, business formation Saudi Arabia, commercial law, real estate advisory, investment advisory, OA Group services{% endblock %}
+{% block og_title %}Services — OA Group{% endblock %}
+{% block og_desc %}Expert legal counsel, end-to-end corporate services, and strategic future ventures including real estate and investment in Saudi Arabia.{% endblock %}
+{% block twitter_title %}Services — OA Group{% endblock %}
+{% block twitter_desc %}Expert legal counsel, corporate services, and strategic future ventures in Saudi Arabia.{% endblock %}
 
 {% block content %}
 
 <!-- HERO -->
 <section class="hero" style="min-height:55vh;">
   <div class="hero-left" style="padding-top:120px;padding-bottom:80px;">
-    <div class="hero-tag"><span class="en">What We Offer</span><span class="ar" style="display:none;">ما نقدمه</span></div>
+    <div class="hero-tag"><span class="en">What We Offer</span><span class="ar">ما نقدمه</span></div>
     <h1 class="hero-h1 en">Our<br><em>Services</em></h1>
-    <h1 class="hero-h1 ar" style="display:none;">خدماتنا<br><em>المتكاملة</em></h1>
+    <h1 class="hero-h1 ar-b">خدماتنا<br><em>المتكاملة</em></h1>
     <div class="hero-rule"></div>
     <p class="hero-body en">From expert legal counsel to comprehensive corporate services and visionary future ventures — OA Group delivers across three core practice areas.</p>
-    <p class="hero-body ar" style="display:none;">من الاستشارات القانونية المتخصصة إلى الخدمات المؤسسية الشاملة والمشاريع المستقبلية — تقدم مجموعة OA خدماتها عبر ثلاثة محاور أساسية.</p>
+    <p class="hero-body ar-b">من الاستشارات القانونية المتخصصة إلى الخدمات المؤسسية الشاملة والمشاريع المستقبلية — تقدم مجموعة OA خدماتها عبر ثلاثة محاور أساسية.</p>
   </div>
   <div class="hero-right">
     <img src="{% static 'images/corporate-meeting.jpg' %}" alt="OA Group — Services">
@@ -22,9 +28,9 @@
 <!-- SERVICES HUB -->
 <section class="sec sec-dark">
   <div class="eyebrow en">Practice Areas</div>
-  <div class="eyebrow ar" style="display:none;">مجالات الممارسة</div>
+  <div class="eyebrow ar-b">مجالات الممارسة</div>
   <h2 class="sec-title en">Three Areas of <em>Expertise</em></h2>
-  <h2 class="sec-title ar" style="display:none;">ثلاثة مجالات من <em>الخبرة</em></h2>
+  <h2 class="sec-title ar-b">ثلاثة مجالات من <em>الخبرة</em></h2>
   <div class="rule"></div>
   <div class="svc-hub" style="margin-top:48px;">
 
@@ -35,14 +41,14 @@
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 6l9-4 9 4v6c0 5.25-3.75 10.15-9 11.25C6.75 22.15 3 17.25 3 12V6z"/></svg>
       </div>
       <div class="svc-hub-title en">Legal Services</div>
-      <div class="svc-hub-title ar" style="display:none;">الخدمات القانونية</div>
-      <div class="svc-hub-sub en">Legal Counsel</div>
-      <div class="svc-hub-sub ar" style="display:none;">الاستشارات القانونية</div>
+      <div class="svc-hub-title ar-b">الخدمات القانونية</div>
+      <div class="svc-hub-sub en">For Individuals</div>
+      <div class="svc-hub-sub ar-b">للأفراد</div>
       <div class="svc-hub-rule"></div>
-      <p class="svc-hub-desc en">Comprehensive legal advisory spanning commercial contracts, corporate law, dispute resolution, and regulatory compliance. Every matter handled with the rigour and discretion it deserves.</p>
-      <p class="svc-hub-desc ar" style="display:none;">استشارات قانونية شاملة تمتد عبر العقود التجارية وقانون الشركات وتسوية النزاعات والامتثال التنظيمي. كل أمر يُعالج بالدقة والسرية التي يستحقها.</p>
-      <a href="{% url 'contact' %}" class="svc-hub-arrow en">Enquire →</a>
-      <a href="{% url 'contact' %}" class="svc-hub-arrow ar" style="display:none;">← استفسر الآن</a>
+      <p class="svc-hub-desc en">Personal legal support and advisory for individuals — covering contracts, disputes, consultations, claims, and legal representation, handled with the rigour and discretion every client deserves.</p>
+      <p class="svc-hub-desc ar-b">دعم واستشارات قانونية شخصية للأفراد، تشمل العقود والنزاعات والاستشارات والمطالبات والتمثيل القانوني، تُعالج جميعها بالدقة والسرية التي يستحقها كل عميل.</p>
+      <a href="{% url 'service_legal' %}" class="svc-hub-arrow en">View Services →</a>
+      <a href="{% url 'service_legal' %}" class="svc-hub-arrow ar-b">← عرض الخدمات</a>
     </div>
 
     <!-- Corporate Services -->
@@ -52,14 +58,14 @@
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v2"/><line x1="12" y1="12" x2="12" y2="16"/><line x1="10" y1="14" x2="14" y2="14"/></svg>
       </div>
       <div class="svc-hub-title en">Corporate Services</div>
-      <div class="svc-hub-title ar" style="display:none;">الخدمات المؤسسية</div>
-      <div class="svc-hub-sub en">Business Setup & Advisory</div>
-      <div class="svc-hub-sub ar" style="display:none;">إنشاء الشركات والاستشارات</div>
+      <div class="svc-hub-title ar-b">الخدمات المؤسسية</div>
+      <div class="svc-hub-sub en">For Companies & Entrepreneurs</div>
+      <div class="svc-hub-sub ar-b">للشركات ورجال الأعمال</div>
       <div class="svc-hub-rule"></div>
-      <p class="svc-hub-desc en">End-to-end support for business formation, corporate structuring, governance, and ongoing operational advisory. Built for founders, investors, and established enterprises alike.</p>
-      <p class="svc-hub-desc ar" style="display:none;">دعم شامل من البداية إلى النهاية لتأسيس الأعمال والهيكلة المؤسسية والحوكمة والاستشارات التشغيلية المستمرة. مصمم للمؤسسين والمستثمرين والشركات الراسخة على حد سواء.</p>
-      <a href="{% url 'contact' %}" class="svc-hub-arrow en">Enquire →</a>
-      <a href="{% url 'contact' %}" class="svc-hub-arrow ar" style="display:none;">← استفسر الآن</a>
+      <p class="svc-hub-desc en">Corporate legal support and advisory for companies, entrepreneurs, and individuals establishing a business — covering company setup, commercial and government procedures, and the regulatory processes involved in launching and operating a business.</p>
+      <p class="svc-hub-desc ar-b">دعم واستشارات قانونية مؤسسية للشركات ورجال الأعمال والأفراد الراغبين في تأسيس شركة، تشمل إجراءات التأسيس والمعاملات التجارية والحكومية والعمليات التنظيمية المتعلقة بإطلاق الأعمال وتشغيلها.</p>
+      <a href="{% url 'service_corporate' %}" class="svc-hub-arrow en">View Services →</a>
+      <a href="{% url 'service_corporate' %}" class="svc-hub-arrow ar-b">← عرض الخدمات</a>
     </div>
 
     <!-- Future Ventures -->
@@ -69,15 +75,15 @@
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
       </div>
       <div class="svc-hub-title en">Future Ventures</div>
-      <div class="svc-hub-title ar" style="display:none;">المشاريع المستقبلية</div>
+      <div class="svc-hub-title ar-b">المشاريع المستقبلية</div>
       <div class="svc-hub-sub en">Investments & New Initiatives</div>
-      <div class="svc-hub-sub ar" style="display:none;">الاستثمارات والمبادرات الجديدة</div>
+      <div class="svc-hub-sub ar-b">الاستثمارات والمبادرات الجديدة</div>
       <div class="svc-hub-rule"></div>
       <p class="svc-hub-desc en">Strategic investments, real estate, and new business ventures in development. OA Group is actively building the next chapter — grounded in research, patience, and long-term value.</p>
-      <p class="svc-hub-desc ar" style="display:none;">استثمارات استراتيجية وعقارات ومشاريع أعمال جديدة قيد التطوير. تبني مجموعة OA بنشاط الفصل القادم — مؤسساً على البحث والصبر والقيمة طويلة الأمد.</p>
+      <p class="svc-hub-desc ar-b">استثمارات استراتيجية وعقارات ومشاريع أعمال جديدة قيد التطوير. تبني مجموعة OA بنشاط الفصل القادم — مؤسساً على البحث والصبر والقيمة طويلة الأمد.</p>
       <div class="svc-hub-coming">
         <div class="pulse-dot"></div>
-        <span class="en">Coming Soon</span><span class="ar" style="display:none;">قريباً</span>
+        <span class="en">Coming Soon</span><span class="ar">قريباً</span>
       </div>
     </div>
 
@@ -88,12 +94,12 @@
 <section class="sec">
   <div class="text-c">
     <div class="eyebrow en">Our Process</div>
-    <div class="eyebrow ar" style="display:none;">منهجيتنا</div>
+    <div class="eyebrow ar-b">منهجيتنا</div>
     <h2 class="sec-title en">How We <em>Work</em></h2>
-    <h2 class="sec-title ar" style="display:none;">كيف <em>نعمل</em></h2>
+    <h2 class="sec-title ar-b">كيف <em>نعمل</em></h2>
     <div class="rule rule-c"></div>
-    <p class="sec-sub en" style="text-align:center;margin:0 auto;">Every engagement begins with a conversation. We listen carefully, assess thoroughly, and deliver with precision. Our work is measured not in transactions, but in outcomes.</p>
-    <p class="sec-sub ar" style="display:none;text-align:center;margin:0 auto;">كل تعاون يبدأ بمحادثة. نستمع بعناية، ونقيّم بشمولية، ونُنجز بدقة. عملنا لا يُقاس بالمعاملات، بل بالنتائج.</p>
+    <p class="sec-sub en" style="text-align:center;margin:0 auto;">Every engagement begins with a conversation. We listen carefully, provide clear and strategic legal guidance, and deliver practical support with a premium, personal experience. Our focus is on long-term relationships — not one-off transactions.</p>
+    <p class="sec-sub ar-b" style="text-align:center;margin:0 auto;">يبدأ كل تعاون بمحادثة. نستمع بعناية، ونقدّم إرشادًا قانونيًا واضحًا واستراتيجيًا، ونوفر دعمًا عمليًا بتجربة مميزة وشخصية. نركّز على بناء علاقات طويلة الأمد، لا معاملات عابرة.</p>
   </div>
 </section>
 

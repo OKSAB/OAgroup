@@ -5,6 +5,31 @@
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>{% block title %}OA Group{% endblock %}</title>
+
+  <!-- SEO core -->
+  <meta name="description" content="{% block meta_desc %}Saudi Arabian professional services platform for legal counsel, corporate advisory, and strategic ventures. Built on integrity and long-term vision.{% endblock %}">
+  <meta name="keywords" content="{% block meta_kw %}OA Group, legal counsel Saudi Arabia, corporate services KSA, Omar AlAmoudi, business advisory Saudi Arabia, real estate investment{% endblock %}">
+  <meta name="author" content="Omar AlAmoudi — OA Group">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="{{ request.build_absolute_uri }}">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="OA Group">
+  <meta property="og:title" content="{% block og_title %}OA Group — Professional Excellence{% endblock %}">
+  <meta property="og:description" content="{% block og_desc %}Saudi Arabian professional services platform for legal counsel, corporate advisory, and strategic ventures. Built on integrity and long-term vision.{% endblock %}">
+  <meta property="og:url" content="{{ request.build_absolute_uri }}">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:locale:alternate" content="ar_SA">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="{% block twitter_title %}OA Group — Professional Excellence{% endblock %}">
+  <meta name="twitter:description" content="{% block twitter_desc %}Saudi Arabian professional services platform for legal counsel, corporate advisory, and strategic ventures.{% endblock %}">
+
+  <!-- Favicon -->
+  <link rel="icon" href="{% static 'images/favicon.svg' %}" type="image/svg+xml">
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&family=Montserrat:wght@300;400;500;600&family=Noto+Serif+Arabic:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="{% static 'css/main.css' %}">
@@ -17,13 +42,50 @@
   <script>
     function setLang(dir) {
       document.documentElement.setAttribute('dir', dir);
-      document.getElementById('btn-en').classList.toggle('active', dir === 'ltr');
-      document.getElementById('btn-ar').classList.toggle('active', dir === 'rtl');
+      document.querySelectorAll('[id^="btn-en"]').forEach(function(b){ b.classList.toggle('active', dir === 'ltr'); });
+      document.querySelectorAll('[id^="btn-ar"]').forEach(function(b){ b.classList.toggle('active', dir === 'rtl'); });
       localStorage.setItem('oagroup_lang', dir);
     }
     (function(){
       var saved = localStorage.getItem('oagroup_lang');
       if (saved) setLang(saved);
+    })();
+
+    (function(){
+      var burger = document.getElementById('nav-burger');
+      var menu   = document.getElementById('nav-mobile');
+      if (!burger || !menu) return;
+      burger.addEventListener('click', function(){
+        var open = menu.classList.toggle('open');
+        burger.classList.toggle('open', open);
+        burger.setAttribute('aria-expanded', open);
+        menu.setAttribute('aria-hidden', !open);
+      });
+      menu.querySelectorAll('.nav-m-link').forEach(function(link){
+        link.addEventListener('click', function(){
+          menu.classList.remove('open');
+          burger.classList.remove('open');
+          burger.setAttribute('aria-expanded', 'false');
+          menu.setAttribute('aria-hidden', 'true');
+        });
+      });
+    })();
+
+    (function(){
+      var nav = document.querySelector('nav');
+      if (!nav) return;
+      var lastY = window.scrollY;
+      window.addEventListener('scroll', function(){
+        var y = window.scrollY;
+        var menu = document.getElementById('nav-mobile');
+        var menuOpen = menu && menu.classList.contains('open');
+        if (!menuOpen && y > lastY && y > nav.offsetHeight) {
+          nav.classList.add('nav-hidden');
+        } else if (y < lastY) {
+          nav.classList.remove('nav-hidden');
+        }
+        lastY = y;
+      }, { passive: true });
     })();
   </script>
 </body>

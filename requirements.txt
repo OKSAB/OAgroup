@@ -1,5 +1,6 @@
 Django>=4.2,<5.0
 django-environ>=0.11.0
+gunicorn>=21.2.0
 
 # MySQL driver — only needed when USE_MYSQL=True in .env
 # Requires MySQL C libraries: brew install mysql

@@ -96,3 +96,26 @@ STATIC_ROOT = BASE_DIR / 'staticfiles'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 MESSAGE_STORAGE = 'django.contrib.messages.storage.session.SessionStorage'
+
+# ── PRODUCTION SECURITY ────────────────────────────────────────────────────
+# Nginx terminates SSL and forwards X-Forwarded-Proto so Django knows the
+# original scheme. Cookie/CSRF security only activates when DEBUG=False.
+SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+SECURE_SSL_REDIRECT      = False   # Nginx handles the HTTP→HTTPS redirect
+SESSION_COOKIE_SECURE    = not DEBUG
+CSRF_COOKIE_SECURE       = not DEBUG
+CSRF_TRUSTED_ORIGINS     = [
+    'https://oalamoudi.com',
+    'https://www.oalamoudi.com',
+    'https://omaralamoudi.pythonanywhere.com',
+]
+
+# ── EMAIL ──────────────────────────────────────────────────────────────────
+EMAIL_BACKEND      = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST         = 'smtp.gmail.com'
+EMAIL_PORT         = 587
+EMAIL_USE_TLS      = True
+EMAIL_HOST_USER    = env('EMAIL_HOST_USER',     default='')
+EMAIL_HOST_PASSWORD= env('EMAIL_HOST_PASSWORD', default='')
+DEFAULT_FROM_EMAIL = env('EMAIL_HOST_USER',     default='')
+CONTACT_NOTIFY_EMAIL = 'al3mody55@gmail.com'

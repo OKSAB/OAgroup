@@ -1,0 +1,218 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Legal Services — OA Group{% endblock %}
+{% block meta_desc %}Expert legal support tailored to individuals and professionals — contracts, representation, consultations, and regulatory compliance. OA Group, Saudi Arabia.{% endblock %}
+{% block og_title %}Legal Services — OA Group{% endblock %}
+{% block og_desc %}Comprehensive legal support tailored to individuals and professionals, with a commitment to protecting your rights and achieving the best possible outcomes.{% endblock %}
+{% block twitter_title %}Legal Services — OA Group{% endblock %}
+{% block twitter_desc %}Comprehensive legal support — contracts, representation, consultations, regulatory compliance. OA Group, Saudi Arabia.{% endblock %}
+
+{% block content %}
+
+<!-- SERVICE SUB-NAV -->
+<nav class="svc-subnav" aria-label="Service navigation">
+  <a href="{% url 'service_legal' %}" class="svc-subnav-link active">
+    <span class="en">Legal Services</span><span class="ar">الخدمات القانونية</span>
+  </a>
+  <a href="{% url 'service_corporate' %}" class="svc-subnav-link">
+    <span class="en">Corporate Services</span><span class="ar">الخدمات المؤسسية</span>
+  </a>
+  <span class="svc-subnav-coming">
+    <span class="pulse-dot"></span>
+    <span class="en">Residences — Coming Soon</span><span class="ar">المساكن — قريباً</span>
+  </span>
+</nav>
+
+<!-- HERO -->
+<section class="hero" style="padding-top:0;min-height:88vh;">
+  <div class="hero-left">
+    <div class="breadcrumb">
+      <a href="{% url 'home' %}"><span class="en">Home</span><span class="ar">الرئيسية</span></a>
+      <span class="breadcrumb-sep">/</span>
+      <a href="{% url 'services' %}"><span class="en">Services</span><span class="ar">الخدمات</span></a>
+      <span class="breadcrumb-sep">/</span>
+      <span><span class="en">Legal</span><span class="ar">القانونية</span></span>
+    </div>
+    <h1 class="hero-h1 en">Legal<br><em>Services</em></h1>
+    <h1 class="hero-h1 ar-b">الخدمات<br><em>القانونية</em></h1>
+    <div class="hero-rule"></div>
+    <p class="hero-body en">Legal support tailored to individuals and professionals, with a commitment to protecting your rights and achieving the best possible outcomes.</p>
+    <p class="hero-body ar-b">دعم قانوني مصمم للأفراد والمهنيين، مع التزام بحماية حقوقك وتحقيق أفضل النتائج الممكنة.</p>
+    <div class="hero-btns">
+      <a href="{% url 'contact' %}" class="btn-ghost"><span class="en">Get in Touch →</span><span class="ar">← تواصل معنا</span></a>
+    </div>
+  </div>
+  <div class="hero-right">
+    <img src="{% static 'images/team-discussion.jpg' %}" alt="Legal Services — OA Group">
+  </div>
+</section>
+
+<!-- OUR LEGAL SERVICES -->
+<section class="sec sec-dark">
+  <div class="text-c">
+    <div class="eyebrow en">Our Legal Services</div>
+    <div class="eyebrow ar-b">خدماتنا القانونية</div>
+    <h2 class="sec-title en">Comprehensive <em>Legal Support</em></h2>
+    <h2 class="sec-title ar-b">دعم قانوني <em>شامل</em></h2>
+    <div class="rule rule-c"></div>
+  </div>
+  <div class="card-grid-4" style="margin-top:48px;">
+    <div class="card">
+      <div class="card-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
+      </div>
+      <div class="card-title en">Legal Communication</div>
+      <div class="card-title ar-b">التواصل القانوني</div>
+      <div class="card-rule"></div>
+      <p class="card-desc en">Clear and professional communication for all your legal matters.</p>
+      <p class="card-desc ar-b">تواصل واضح ومهني في جميع شؤونك القانونية.</p>
+    </div>
+    <div class="card">
+      <div class="card-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+      </div>
+      <div class="card-title en">Contracts</div>
+      <div class="card-title ar-b">العقود</div>
+      <div class="card-rule"></div>
+      <p class="card-desc en">Drafting, reviewing, and managing contracts that protect your interests.</p>
+      <p class="card-desc ar-b">صياغة ومراجعة وإدارة العقود التي تحمي مصالحك.</p>
+    </div>
+    <div class="card">
+      <div class="card-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v2"/></svg>
+      </div>
+      <div class="card-title en">Representation</div>
+      <div class="card-title ar-b">التمثيل القانوني</div>
+      <div class="card-rule"></div>
+      <p class="card-desc en">Legal representation that safeguards your rights and achieves results.</p>
+      <p class="card-desc ar-b">تمثيل قانوني يصون حقوقك ويحقق النتائج المرجوة.</p>
+    </div>
+    <div class="card">
+      <div class="card-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+      </div>
+      <div class="card-title en">Consultations</div>
+      <div class="card-title ar-b">الاستشارات</div>
+      <div class="card-rule"></div>
+      <p class="card-desc en">Strategic legal advice to support confident decisions.</p>
+      <p class="card-desc ar-b">مشورة قانونية استراتيجية لدعم قراراتك بثقة.</p>
+    </div>
+  </div>
+</section>
+
+<!-- OUR APPROACH -->
+<section class="split split-balanced">
+  <div class="split-img fade-r">
+    <img src="{% static 'images/ksa-professional.jpg' %}" alt="Our Approach">
+  </div>
+  <div class="split-content">
+    <div class="eyebrow en">Our Approach</div>
+    <div class="eyebrow ar-b">منهجيتنا</div>
+    <h2 class="sec-title en">Focused.<br>Strategic.<br><em>Reliable.</em></h2>
+    <h2 class="sec-title ar-b">مركّز.<br>استراتيجي.<br><em>موثوق.</em></h2>
+    <div class="rule"></div>
+    <p class="sec-sub en">We combine legal expertise with a deep understanding of your situation to deliver solutions that protect, advise, and help you achieve your goals.</p>
+    <p class="sec-sub ar-b">نجمع الخبرة القانونية مع الفهم العميق لظروفك لتقديم حلول تحميك وترشدك وتساعدك على تحقيق أهدافك.</p>
+    <div class="approach-stats">
+      <div class="approach-stat">
+        <div class="approach-stat-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 6l9-4 9 4v6c0 5.25-3.75 10.15-9 11.25C6.75 22.15 3 17.25 3 12V6z"/></svg>
+        </div>
+        <div class="approach-stat-label en">Confidential</div>
+        <div class="approach-stat-label ar">سري</div>
+      </div>
+      <div class="approach-stat">
+        <div class="approach-stat-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 015.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17" stroke-width="2.5"/></svg>
+        </div>
+        <div class="approach-stat-label en">Advisory</div>
+        <div class="approach-stat-label ar">استشاري</div>
+      </div>
+      <div class="approach-stat">
+        <div class="approach-stat-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+        </div>
+        <div class="approach-stat-label en">Results</div>
+        <div class="approach-stat-label ar">نتائج</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY WORK WITH US -->
+<section class="split split-balanced sec-dark" style="direction:rtl;" dir="ltr">
+  <div class="split-content" style="direction:ltr;">
+    <div class="eyebrow en">Why Work With Us</div>
+    <div class="eyebrow ar-b">لماذا تعمل معنا</div>
+    <h2 class="sec-title en">A Partner You<br>Can <em>Rely On.</em></h2>
+    <h2 class="sec-title ar-b">شريك يمكنك<br><em>الاعتماد عليه.</em></h2>
+    <div class="rule"></div>
+    <div class="why-points">
+      <div>
+        <div class="why-point-name en">Confidential</div>
+        <div class="why-point-name ar-b">سرية تامة</div>
+        <p class="why-point-desc en">Every matter handled with the highest level of discretion.</p>
+        <p class="why-point-desc ar-b">كل أمر يُعالج بأعلى مستوى من السرية.</p>
+      </div>
+      <div>
+        <div class="why-point-name en">Client-Centered</div>
+        <div class="why-point-name ar-b">مرتكز على العميل</div>
+        <p class="why-point-desc en">Your goals are the priority. Every solution is tailored.</p>
+        <p class="why-point-desc ar-b">أهدافك هي الأولوية. كل حل مصمم خصيصاً لك.</p>
+      </div>
+      <div>
+        <div class="why-point-name en">Results-Driven</div>
+        <div class="why-point-name ar-b">موجَّه نحو النتائج</div>
+        <p class="why-point-desc en">Practical solutions focused on real, measurable impact.</p>
+        <p class="why-point-desc ar-b">حلول عملية تركز على الأثر الحقيقي والقابل للقياس.</p>
+      </div>
+      <div>
+        <div class="why-point-name en">Long-Term Thinking</div>
+        <div class="why-point-name ar-b">تفكير طويل الأمد</div>
+        <p class="why-point-desc en">Built for lasting partnerships, not just transactions.</p>
+        <p class="why-point-desc ar-b">مبني على شراكات دائمة، لا مجرد صفقات.</p>
+      </div>
+    </div>
+  </div>
+  <div class="split-img fade-l">
+    <img src="{% static 'images/corporate-meeting.jpg' %}" alt="Why Work With Us">
+  </div>
+</section>
+
+<!-- SERVICE CTA BAND -->
+<div class="cta-band">
+  <div>
+    <div class="cta-band-title en">Let's Work<br><em>Together.</em></div>
+    <div class="cta-band-title ar-b">لنعمل<br><em>معاً.</em></div>
+    <p style="font-size:14px;color:var(--dim);margin-top:12px;" class="en">Tailored legal support for your needs.</p>
+    <p style="font-size:14px;color:var(--dim);margin-top:12px;" class="ar-b">دعم قانوني مصمم لاحتياجاتك.</p>
+  </div>
+  <div class="cta-band-right">
+    <div class="cta-contact-row">
+      <div class="cta-c-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+      </div>
+      <div>
+        <div class="cta-c-label en">Email</div>
+        <div class="cta-c-label ar-b">البريد الإلكتروني</div>
+        <a href="mailto:legal@oalamoudi.com" class="cta-c-val ltr-inline">legal@oalamoudi.com</a>
+      </div>
+    </div>
+    <div class="cta-contact-row">
+      <div class="cta-c-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.63A2 2 0 012 .18h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+      </div>
+      <div>
+        <div class="cta-c-label en">Phone</div>
+        <div class="cta-c-label ar-b">الهاتف</div>
+        <a href="tel:+966574000069" class="cta-c-val ltr-inline">+966 57 400 0069</a>
+      </div>
+    </div>
+    <a href="{% url 'contact' %}" class="btn-gold" style="align-self:flex-start;margin-top:8px;">
+      <span class="en">Get in Touch →</span><span class="ar">← تواصل معنا</span>
+    </a>
+  </div>
+</div>
+
+{% include 'partials/footer.html' %}
+{% endblock %}

@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% block title %}Page Not Found — OA Group{% endblock %}
+{% block meta_desc %}The page you are looking for could not be found. Return to OA Group.{% endblock %}
+{% block og_title %}Page Not Found — OA Group{% endblock %}
+{% block og_desc %}The page you are looking for could not be found.{% endblock %}
+
+{% block content %}
+<section class="error-page">
+  <div class="error-code">404</div>
+  <div class="error-rule"></div>
+  <div class="eyebrow en">Page Not Found</div>
+  <div class="eyebrow ar-b">الصفحة غير موجودة</div>
+  <h1 class="error-title en">We couldn't find<br>what you were<br><em>looking for.</em></h1>
+  <h1 class="error-title ar-b">لم نتمكن من العثور<br>على ما كنت<br><em>تبحث عنه.</em></h1>
+  <p class="error-body en">The page may have been moved, deleted, or never existed. Try heading back to the home page.</p>
+  <p class="error-body ar-b">ربما تم نقل الصفحة أو حذفها أو لم تكن موجودة أصلاً. حاول العودة إلى الصفحة الرئيسية.</p>
+  <div class="error-actions">
+    <a href="/" class="btn-gold"><span class="en">Return Home →</span><span class="ar">← العودة للرئيسية</span></a>
+    <a href="javascript:history.back()" class="btn-ghost"><span class="en">Go Back</span><span class="ar">رجوع</span></a>
+  </div>
+</section>
+{% endblock %}

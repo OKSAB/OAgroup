@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% block title %}Server Error — OA Group{% endblock %}
+{% block meta_desc %}An unexpected error occurred. Return to OA Group.{% endblock %}
+{% block meta_kw %}{% endblock %}
+{% block og_title %}Server Error — OA Group{% endblock %}
+{% block og_desc %}An unexpected error occurred on this page.{% endblock %}
+
+{% block content %}
+<section class="error-page">
+  <div class="error-code">500</div>
+  <div class="error-rule"></div>
+  <div class="eyebrow en">Server Error</div>
+  <div class="eyebrow ar-b">خطأ في الخادم</div>
+  <h1 class="error-title en">Something went<br>wrong on our<br><em>end.</em></h1>
+  <h1 class="error-title ar-b">حدث خطأ ما<br>من<br><em>جانبنا.</em></h1>
+  <p class="error-body en">We're aware of the issue and working to resolve it. Please try again in a moment, or return to the home page.</p>
+  <p class="error-body ar-b">نحن على علم بالمشكلة ونعمل على حلّها. يرجى المحاولة مرة أخرى بعد قليل، أو العودة إلى الصفحة الرئيسية.</p>
+  <div class="error-actions">
+    <a href="/" class="btn-gold"><span class="en">Return Home →</span><span class="ar">← العودة للرئيسية</span></a>
+  </div>
+</section>
+{% endblock %}
