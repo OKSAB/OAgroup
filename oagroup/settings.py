@@ -111,10 +111,10 @@ CSRF_TRUSTED_ORIGINS     = [
 ]
 
 # ── EMAIL ──────────────────────────────────────────────────────────────────
-EMAIL_BACKEND      = 'django.core.mail.backends.smtp.EmailBackend'
-EMAIL_HOST         = 'smtp.gmail.com'
-EMAIL_PORT         = 587
-EMAIL_USE_TLS      = True
+EMAIL_BACKEND      = 'core.email_backend.EmailBackend'
+EMAIL_HOST         = env('EMAIL_HOST',     default='mail.oalamoudi.com')
+EMAIL_PORT         = env.int('EMAIL_PORT', default=465)
+EMAIL_USE_SSL      = True
 EMAIL_HOST_USER    = env('EMAIL_HOST_USER',     default='')
 EMAIL_HOST_PASSWORD= env('EMAIL_HOST_PASSWORD', default='')
 DEFAULT_FROM_EMAIL = env('EMAIL_HOST_USER',     default='')
