@@ -118,4 +118,4 @@ EMAIL_USE_TLS      = True
 EMAIL_HOST_USER    = env('EMAIL_HOST_USER',     default='')
 EMAIL_HOST_PASSWORD= env('EMAIL_HOST_PASSWORD', default='')
 DEFAULT_FROM_EMAIL = env('EMAIL_HOST_USER',     default='')
-CONTACT_NOTIFY_EMAIL = 'al3mody55@gmail.com'
+CONTACT_NOTIFY_EMAIL = env('CONTACT_NOTIFY_EMAIL', default='info@oalamoudi.com')
